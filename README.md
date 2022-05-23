@@ -110,7 +110,7 @@ public class Step01 {
 <a class="sourceLine" id="cb3-32" title="32">        <span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(droit.<span class="fu">b</span>);</a>
 <a class="sourceLine" id="cb3-33" title="33">    }</a>
 <a class="sourceLine" id="cb3-34" title="34">}</a></code></pre></div>
-<p>On notera l’usage du constructeur privé afin d’emplêcher le sous-classage excepté des classes <code>Gauche</code> et <code>Droit</code>, ainsi que les modificateurs <code>final</code> devant ces deux classes, afin là aussi d’empécher le sous-classage. L’important de cette interdiction apparaît dans la fonction principale, où l’on teste l’appartenance du résultat à une classe ou l’autre.</p>
+<p>On notera l’usage du constructeur privé afin d’empêcher le sous-classage excepté des classes <code>Gauche</code> et <code>Droit</code>, ainsi que les modificateurs <code>final</code> devant ces deux classes, afin là aussi d’empécher le sous-classage. L’important de cette interdiction apparaît dans la fonction principale, où l’on teste l’appartenance du résultat à une classe ou l’autre.</p>
 <p>Ici, le premier problème de cohérence de structure a été résolu, car on ne peut plus faire de résultat incohérent. Par contre, il reste toujours le problème de cohérence à l’utilisation, car chaque branche du test <code>instanceof</code> peut ne pas être cohérent avec le résultat du test.</p>
 <h2 id="utilisation-cohérente">Utilisation cohérente</h2>
 <p>Tout en gardant l’idée de la sous-classe pour garder la cohérence à la construction, on propose cette modification pour permettre de conserver le test de cohérence lors de l’utilisation.</p>

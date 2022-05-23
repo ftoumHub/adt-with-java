@@ -8,6 +8,7 @@ import org.junit.Test;
 import java.math.BigDecimal;
 import java.util.function.Function;
 
+import static java.math.BigDecimal.TEN;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MyFunctorTest {
@@ -80,11 +81,9 @@ public class MyFunctorTest {
     public void html_functor_should_map_value() {
         MyFunctor<Integer> price = MyFunctor.of(42);
 
-        BigDecimal vat = BigDecimal.TEN;
-
         MyFunctor<BigDecimal> fmap = price
                 .map(BigDecimal::new)
-                .map(x -> x.add(vat));
+                .map(x -> x.add(TEN));
 
         assertThat(fmap.get()).isEqualTo(new BigDecimal("52"));
     }
